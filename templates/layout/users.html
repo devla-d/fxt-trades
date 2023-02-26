@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock title %} | {{domain}}</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/users/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/users/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/users/vendor/fontawesome/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/users/vendor/aos/aos.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/users/vendor/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/users/vendor/glightbox/css/glightbox.css"
+    />
+    <link rel="stylesheet" href="/assets/users/css/animate.min.css" />
+    <link rel="stylesheet" href="/assets/users/css/style.css" />
+    <link rel="stylesheet" href="/assets/users/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/users/css/slick.min.css" />
+    <link rel="stylesheet" href="/assets/users/css/slick-theme.min.css" />
+    <link rel="stylesheet" href="/assets/users/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/users/css/toastr.min.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/users/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+    />
+    {% block styles %} {% endblock styles %}
+  </head>
+
+  <body>
+    {% if messages %} {% for msg in messages %}
+    <div style="display: none" class="messages" data-msg="{{ msg }}"></div>
+    {% endfor %} {% endif %}
+
+    <main class="wrapper dashboard show">
+      <!----[left panel]-->
+      <div class="left-panel">
+        <div class="left-panel-menu">
+          <div class="row mb-4 no-gutters">
+            <div class="col-auto">
+              <div class="avatar position-relative">
+                <img
+                  src="https://ui-avatars.com/api/?name={{user.username}}"
+                  alt=" "
+                />
+              </div>
+            </div>
+            <div class="col pl-3 text-left align-self-center">
+              <h6 class="mb-1 text-white">@{{user.username}}</h6>
+              <p class="small text-success">{{user.unique_id}}</p>
+            </div>
+          </div>
+          <hr class="divider" />
+
+          <ul>
+            <li>
+              <a href="{% url 'dashboard' %}"
+                ><i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashbaord</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="{% url 'withdrawal' %}">
+                <i class="far fa-fw fa-credit-card"></i>
+                <span>Withdraw</span></a
+              >
+            </li>
+            <li>
+              <a href="{% url 'transactions_' %}">
+                <i class="fas fa-fw fa-history"></i>
+                <span>Transactions</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/#referrals" id="open-ref">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Referrals</span>
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'settings_' %}">
+                <i class="fas fa-fw fa-cog fa-"></i> <span>Settings</span></a
+              >
+            </li>
+            <li>
+              <a href="{% url 'sign_out' %}">
+                <i class="fas fa-fw fa-sign-out-alt"></i><span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!----[left panel ends]-->
+      <!----[right panel ]-->
+      <div class="right-panel d-flex flex-column">
+        <div class="dashbaordcontent">
+          <!-- TopBar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top"
+          >
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a
+                  class="nav-link dropdown-toggle text-or open-notification"
+                  href="#"
+                  id="alertsDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-bell fa-fw"></i>
+                </a>
+              </li>
+
+              <div class="topbar-divider d-none d-sm-block"></div>
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="img-profile rounded-circle"
+                    src="https://ui-avatars.com/api/?name={{user.username}}"
+                    style="max-width: 60px"
+                  />
+                  <span
+                    class="ml-2 d-none d-lg-inline text-success small"
+                  ></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Topbar -->
+
+          <div class="container-fluid">
+            {% block content %} {% endblock content %}
+
+            <div class="dashboard-footer">
+              <p class="text-center">{{domain}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----[right panel ends]-->
+    </main>
+
+    <!----[notification panel ]-->
+    <div class="notification-dialog" role="document">
+      <div class="noti-content">
+        <div class="noti-dialog-header">
+          <h3>Notifications</h3>
+          <span>
+            <i class="fa fa-times close-notification"></i>
+          </span>
+        </div>
+        <div class="noti-dialog-body">
+          <div class="">
+            {% for obj in notifications %}
+            <div class="noti-item">
+              <div class="icon-circle bg-warning">
+                <i class="fas fa-exclamation-triangle text-white"></i>
+              </div>
+
+              <div style="color: #3a3b45">
+                <div class="small text-gray-500">
+                  {{obj.date|date:"M d, Y"}}
+                </div>
+                {{obj.body}}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----[notification panel ]-->
+    <!--[referal panel]-->
+    <div class="referral-dialog">
+      <div class="ref-dialog-content">
+        <div class="ref-icon animate" style="display: block">
+          <i class="fas fa-check"></i>
+        </div>
+        <h2>Your referrals!</h2>
+        <ul class="ref-menu">
+          <li>
+            <h3>No of Referrals</h3>
+            <p>{{referral}}</p>
+          </li>
+          <li>
+            <h3>Referral Bonus</h3>
+            <p>${{referral_bonus}}</p>
+          </li>
+          <li>
+            <label for="">Referral Link</label>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control ref-link"
+                value="http://{{domain}}/register/?ref-code={{unique_id}}"
+                id="myInput"
+                disabled
+              />
+
+              <div class="mytooltip input-group-append">
+                <button
+                  type="button"
+                  style="height: 43px"
+                  class="input-group-text btn btn-primary"
+                  onclick="copyFunction('myInput')"
+                  onmouseout="outFunc()"
+                >
+                  <span class="tooltiptext" id="myTooltip">Copy </span>
+                  <span class="txt">Copy</span>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="close-ref-dialog">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+    <!--[referral panel]-->
+
+    <script src="/assets/users/vendor/jquery/jquery.min.js "></script>
+    <script src="/assets/users/js/jquery-ui.min.js "></script>
+    <script src="/assets/users/vendor/bootstrap/js/bootstrap.bundle.js "></script>
+    <script src="/assets/users/vendor/aos/aos.js "></script>
+    <script src="/assets/users/js/wow.min.js "></script>
+    <script src="/assets/users//js/slick.min.js "></script>
+    <script src="/assets/users/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="/assets/users/js/toastr.min.js"></script>
+    {% if messages %}
+    <script src="/assets/users/js/toastr-init.js"></script>
+    {% endif %}
+    <script src="/assets/users/js/circle-progress.min.js"></script>
+    <script src="/assets/users/js/circle-progress-init.js"></script>
+    <script src="/assets/users/js/scripts.js "></script>
+
+    {% block scripts %} {% endblock scripts %}
+
+    <script>
+      /* Cpy to clipboard*/
+      function copyFunction(input) {
+        var copyText = document.getElementById(input);
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied";
+      }
+
+      function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy Link";
+      }
+    </script>
+  </body>
+</html>

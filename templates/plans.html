@@ -1,0 +1,113 @@
+{% extends "layout/home.html" %}
+<!---->
+{% block title %} plans {% endblock title %}<!---->
+{% block content %}
+<!-- START NEW HERO IMAGE HERE  --- ####################################################-->
+<div class="splash-container">
+  <div class="splash-bg mobile">
+    <img
+      src="/assets/img/academy-splash-mobile.jpg"
+      alt="Trade Academy Packs"
+    />
+  </div>
+  <div class="splash-bg desktop">
+    <img src="/assets/img/academy-splash-bg.jpg" alt="Trade Academy Packs" />
+  </div>
+  <div class="splash-text">
+    <h1>Investment & Bitcoin Mining Plans</h1>
+    <h3>There’s a perfect pack for you</h3>
+    <h3 style="color: red">
+      Each Investment Plan comes with an opportunity for investors
+    </h3>
+  </div>
+</div>
+<!-- EMD NEW HERO IMAGE HERE  --- ####################################################-->
+
+<div class="plans-list">
+  <div class="plan-block">
+    <div class="plan-title">
+      <div class="plan-title-underlay">Investment</div>
+      <h1>Investment Plans</h1>
+      <div>
+        <h3 style="color: red"></h3>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-300">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>Basic Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $500<br />
+              Maximum Deposit: $6,999<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-500">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>Standard Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $7,000<br />
+              Maximum Deposit: $19,999<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-1k">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>VIP Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $20,000<br />
+              Maximum Deposit: $99,999<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-2k">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>PREMIUM Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $100,000<br />
+              Maximum Deposit: $500,000<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="help-bar">
+  Need Help?
+  <a href="contact.html" class="btn btn-light" style="color: #8abc56"
+    >Contact Us</a
+  >
+</div>
+
+{% endblock content %}

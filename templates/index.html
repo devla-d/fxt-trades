@@ -1,0 +1,821 @@
+{% extends "layout/home.html" %}
+<!---->
+{% block title %} welcome to {% endblock title %}<!---->
+{% block content %}
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script
+    type="text/javascript"
+    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+    async
+  >
+    {
+    "symbols": [
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "BTC/USD"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "ETH/USD"
+      },
+      {
+        "description": "BNB/USDT",
+        "proName": "BINANCE:BNBUSDT"
+      },
+      {
+        "description": "DOT/USDT",
+        "proName": "BINANCE:DOTUSDT"
+      },
+      {
+        "description": " BLX",
+        "proName": "BNC:BLX"
+      },
+      {
+        "description": "BTC/PERP",
+        "proName": "BINANCE:BTCPERP"
+      }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "locale": "en"
+    }
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<div class="front-slider">
+  <div
+    id="desktop-slider"
+    class="carousel slide carousel-fade"
+    data-ride="carousel"
+  >
+    <ol class="carousel-indicators">
+      <li data-target="#desktop-slider" data-slide-to="0" class="active"></li>
+      <li data-target="#desktop-slider" data-slide-to="1"></li>
+      <li data-target="#desktop-slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="/assets/slides/banner-copy-trade.png"
+          alt="Expanding the possibilities"
+        />
+
+        <div class="carousel-caption">
+          <h1>
+            <strong>Join Our life Changing Investment Plans</strong><br />
+            Invest $5000+ for massive Pay Out
+          </h1>
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+      <div class="carousel-item">
+        <picture class="d-block w-100">
+          <source srcset="/assets/slides/slide_2.jpg" type="image/jpeg" />
+          <source srcset="/assets/slides/slide_2.jpg" type="image/jpeg" />
+          <img src="/assets/slides/slide_2.jpg" alt="The impossible" />
+        </picture>
+        <div class="carousel-caption">
+          <h1>
+            <strong>The impossible</strong><br />
+            and unthinkable.
+          </h1>
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+      <div class="carousel-item">
+        <picture class="d-block w-100">
+          <source srcset="/assets/slides/slide_3.jpg" type="image/jpeg" />
+          <source srcset="/assets/slides/slide_3.jpg" type="image/jpeg" />
+          <img
+            src="/assets/slides/slide_3.jpg"
+            alt="Expanding the possibilities"
+          />
+        </picture>
+
+        <div class="carousel-caption">
+          <h1>
+            <strong>Profits up to $50,000</strong><br />
+            Invest $5000 and above to qualify now
+          </h1>
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+      <div class="carousel-item">
+        <picture class="d-block w-100">
+          <source srcset="assets/slides/slide_4.jpg" type="image/jpeg" />
+          <source srcset="assets/slides/slide_4.jpg" type="image/jpeg" />
+          <img
+            src="/assets/slides/slide_4.jpg"
+            alt="Expanding the possibilities"
+          />
+        </picture>
+        <div class="carousel-caption">
+          <h1><strong>A brand new</strong><br />horizon</h1>
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#desktop-slider"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#desktop-slider"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div
+    id="mobile-slider"
+    class="carousel slide carousel-fade"
+    data-ride="carousel"
+  >
+    <ol class="carousel-indicators">
+      <li data-target="#mobile-slider" data-slide-to="0" class="active"></li>
+      <li data-target="#mobile-slider" data-slide-to="1"></li>
+      <li data-target="#mobile-slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <picture class="d-block w-100">
+          <source srcset="assets/slides/slide_1-mobile.jpg" type="image/jpeg" />
+          <source srcset="assets/slides/slide_1-mobile.jpg" type="image/jpeg" />
+          <img
+            src="/assets/slides/slide_1-mobile.jpg"
+            alt="Expanding the possibilities"
+          />
+        </picture>
+
+        <div class="carousel-caption">
+          <h1>
+            <strong>Join Our life Changing Investment Plans</strong><br />
+            Invest $5000+ for massive Pay Out opportunities
+          </h1>
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+      <div class="carousel-item">
+        <picture class="d-block w-100">
+          <source srcset="assets/slides/slide_2-mobile.jpg" type="image/jpeg" />
+          <source srcset="assets/slides/slide_2-mobile.jpg" type="image/jpeg" />
+          <img
+            src="/assets/slides/slide_2-mobile.jpg"
+            alt="Expanding the possibilities"
+          />
+        </picture>
+
+        <div class="carousel-caption">
+          <h1>
+            <strong>The impossible</strong><br />
+            and unthinkable.
+          </h1>
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+      <div class="carousel-item">
+        <picture class="d-block w-100">
+          <source srcset="assets/slides/slide_3-mobile.jpg" type="image/jpeg" />
+          <source srcset="assets/slides/slide_3-mobile.jpg" type="image/jpeg" />
+          <img
+            src="/assets/slides/slide_3-mobile.jpg"
+            alt="Expanding the possibilities"
+          />
+        </picture>
+
+        <div class="carousel-caption">
+          <h1>
+            <strong> Profits up to $50,000</strong><br />
+            Invest $5000 and above to qualify now
+          </h1>
+
+          <br />
+
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+      <div class="carousel-item">
+        <picture class="d-block w-100">
+          <source srcset="assets/slides/slide_4-mobile.jpg" type="image/jpeg" />
+          <source srcset="assets/slides/slide_4-mobile.jpg" type="image/jpeg" />
+          <img
+            src="/assets/slides/slide_4-mobile.jpg"
+            alt="Expanding the possibilities"
+          />
+        </picture>
+
+        <div class="carousel-caption">
+          <h1><strong>A brand new</strong><br />horizon</h1>
+          <a href="register/index.php" class="btn btn-default btn-lg"
+            >Start Now!</a
+          >
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#mobile-slider"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#mobile-slider"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="front-page-features">
+  <div class="timing feature-item">
+    <div class="feature-item-icon">
+      <img src="/assets/img/time-icon.png" alt="timing icon" />
+    </div>
+    <h3>The Right<br />Timing</h3>
+    <p>
+      Our doors are open to create a new beginning. We aligned possibilities
+      using advanced algorithms in the financial market because, in the Bitcoin
+      mining market, time is money.
+    </p>
+  </div>
+
+  <div class="team feature-item">
+    <div class="feature-item-icon">
+      <img src="/assets/img/team-icon.png" alt="team icon" />
+    </div>
+    <h3>
+      The Right<br />
+      Team
+    </h3>
+    <p>
+      The Crypto Flex Trades visionary team is committed to delivering
+      exceptional results, focused being one step ahead. We are building an FX
+      trading platform for the long-term, setting up the standard to change the
+      fortune of future generations to come!
+    </p>
+  </div>
+
+  <div class="technology feature-item">
+    <div class="feature-item-icon">
+      <img src="/assets/img/ui-icon.png" alt="tech icon" />
+    </div>
+    <h3>
+      The Right<br />
+      Technology
+    </h3>
+    <p>
+      A completely unique approach to EA (Bitcoin mining software) and AI
+      development. Outstanding results, closely monitored and measured by the
+      Crypto Flex Trades trading team of dedicated professionals. No Whitelabel
+      or 3rd party technology employed.
+    </p>
+  </div>
+</div>
+
+<div style="display: block; position: relative; z-index: 1">
+  <div class="front-page-video-block">
+    <div class="video-area">
+      <div class="video-container">
+        <iframe
+          width="350"
+          height="516"
+          src="https://www.youtube.com/embed/Gc2en3nHxA4"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div class="video-summary">
+          <p>PART OF SOMETHING BIGGER</p>
+          <h3>
+            The complex world of Bitcoin mining just got a lot easier with
+            Crypto Flex Trades
+          </h3>
+          <p>
+            The 5 trillion dollar a day Bitcoin mining attracts millions of
+            people with a shared dream of financial freedom. Crypto Flex Trades
+            is artfully combining the technical expertise required for Bitcoin
+            mining success, with a dedicated corporate team, state-of-the-art
+            headquarters and a passion for helping those with a strong desire to
+            improve their lives.
+          </p>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="academy-block text-center">
+  <div class="container">
+    <h1><small>WELCOME TO THE TRADING</small><br />Academy</h1>
+    <p style="font-weight: 500">
+      We have developed much more than an online Bitcoin mining learning center.
+      Crypto Flex Trades has combined Academy learning with real Bitcoin mining
+      success with our Trade Contracts. Crypto Flex Trades members may choose to
+      participate in the Crypto Flex Trades automated trading platform and
+      benefit from all Crypto Flex Trades trade technology while they progress
+      through their Trade Academy packs curriculum. Learning at your own pace
+      has never been so rewarding. You can earn while you learn.
+    </p>
+
+    <div class="academy-feature-grid">
+      <div class="academy-feature academy-1">
+        <img
+          src="/assets/img/knowledge-icon.png"
+          class="academy-icon"
+          alt="Knowledge"
+        />
+        <h3>Knowledge</h3>
+        <p>
+          Knowledge is the foundation of your future success. The Crypto Flex
+          Trades Academy will be your partner in maintaining your foundation for
+          a lifetime of financial success.
+        </p>
+      </div>
+
+      <div class="academy-feature academy-2">
+        <img
+          src="/assets/img/execution-icon.png"
+          class="academy-icon"
+          alt="Execution"
+        />
+        <h3>Execution</h3>
+        <p>
+          With your foundation in place, develop the skills of a profitable
+          trader so you are taking the proper actions when the time is right.
+        </p>
+      </div>
+
+      <div class="academy-feature academy-3">
+        <img
+          src="/assets/img/achievement-icon.png"
+          class="academy-icon"
+          alt="Achievement"
+        />
+        <h3>Achievement</h3>
+        <p>
+          Imagine having the skills required to understand and profit in the
+          largest financial market in the world. Graduating through the Crypto
+          Flex Trades Academy will be one of your most valued lifetime
+          achievements.
+        </p>
+      </div>
+    </div>
+
+    <a href="academy.html" class="btn btn-outline-light btn-lg"
+      >Go To Your Academy</a
+    >
+  </div>
+</div>
+<div class="plans-list">
+  <div class="plan-block">
+    <div class="plan-title">
+      <div class="plan-title-underlay">Investment</div>
+      <h1>Investment Plans</h1>
+      <div>
+        <h3 style="color: red"></h3>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-300">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>Basic Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $500<br />
+              Maximum Deposit: $6,999<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-500">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>Standard Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $7,000<br />
+              Maximum Deposit: $19,999<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-1k">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>VIP Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $20,000<br />
+              Maximum Deposit: $99,999<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="package-card elemental-2k">
+            <div class="package-icon">
+              <img
+                src="/assets/img/plan-icons/3001.png"
+                alt="Academy Pack 300"
+              />
+            </div>
+            <h3>PREMIUM Plan</h3>
+            <p class="package-feature-list">
+              Minimum Deposit: $100,000<br />
+              Maximum Deposit: $500,000<br />
+            </p>
+            <a href="register/index.php" class="btn btn-default">Start Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="platform-block">
+  <div class="text-center">
+    <h1><small>SOMETHING DIFFERENT,</small> Something New.</h1>
+    <p class="lead" style="color: #fff">
+      Key Platform features that set us apart<br />
+      in the Bitcoin marketplace
+    </p>
+
+    <div class="platform-computer">
+      <img
+        src="https://images.theconversation.com/files/377566/original/file-20210107-16-s68pom.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+        class="computer-image"
+        alt="computer showing trading platform"
+      />
+
+      <div class="platform-features">
+        <div class="platform-feature fast-payments">
+          <div class="platform-icon">
+            <img src="/assets/img/fast-payments-icon.png" alt="Fast Payments" />
+          </div>
+          <h3>Fast Payments</h3>
+          <p style="color: #fff">
+            Experiencing Trading success from the Crypto Flex Trades platform is
+            critically important to all our members, equally important is being
+            able to access trading gains. Crypto Flex Trades makes using Bitcoin
+            gains easy for all, regardless of your technical abilities!
+          </p>
+        </div>
+
+        <div class="platform-feature layered-security">
+          <div class="platform-icon">
+            <img
+              src="/assets/img/layered-security-icon.png"
+              alt="Layerd Security"
+            />
+          </div>
+          <h3>Layered Security</h3>
+          <p style="color: #fff">
+            Our passion is to assist you in your success; however, our
+            technicians also make sure all platforms are protected with
+            state-of-the-art security ensuring long-term results for our global
+            membership.
+          </p>
+        </div>
+
+        <div class="platform-feature proprietary-tech">
+          <div class="platform-icon">
+            <img
+              src="/assets/img/propriotary-tech-icon.png"
+              alt="Proprietary Technology"
+            />
+          </div>
+          <h3>Proprietary Technology</h3>
+          <p style="color: #fff">
+            EA’s and other trading technology is designed exclusively at Crypto
+            Flex Trades by our own team of experts. All systems are developed
+            and refined exclusively for Crypto Flex Trades member use.
+          </p>
+        </div>
+
+        <div class="platform-feature transparent-reporting">
+          <div class="platform-icon">
+            <img
+              src="/assets/img/transparent-reporting-icon.png"
+              alt="Transparent Reporting"
+            />
+          </div>
+          <h3>Transparent Reporting</h3>
+          <p style="color: #fff">
+            Access trade results easily and check Crypto Flex Trades historical
+            trade results. WebTV with up to date trade ticker in member
+            back-office! And Copy trade connect you directly to our results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ace-trader-block">
+  <h1>Become a member in 4 Steps</h1>
+  <div class="ace-container">
+    <div class="ace-trader-grid">
+      <div class="ace-grid-item step-1">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Register</h3>
+          Open your Crypto Flex Trades Account and join us.
+        </div>
+      </div>
+
+      <div class="ace-grid-item step-2">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Login</h3>
+          Confirm your info and complete your login
+        </div>
+      </div>
+
+      <div class="ace-grid-item step-3">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Fund</h3>
+          Through Bitcoin payment, fund your account
+        </div>
+      </div>
+
+      <div class="ace-grid-item step-4">
+        <div class="step-number">4</div>
+        <div class="step-content"><h3>Start Earning</h3></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-block">
+  <h1>Testimonials</h1>
+  <div class="">
+    <div
+      id="carouselExampleCaptions2"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-caption">
+            <p>
+              This has been the most transparent and professional project we
+              have ever been a part of. From the transparency of the owners, the
+              trading operation, the Brokers and other partners, has been
+              nothing but 100% across the board. We really are building a legacy
+              company!.
+            </p>
+            <p><strong>Luigi Bruni and Justin Halladay</strong></p>
+            <p>The Presidents Club</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              I have been involved in 5 different opportunities in the last 20
+              years, and all 5 have not finished their road map, Crypto Flex
+              Trades is so different in many ways, the directors are transparent
+              about all aspects of the business, and we get paid exactly when
+              they say we get paid, I LOVE this company and I look forward to a
+              bright future for my team in my country.
+            </p>
+            <p><strong>GAVIN NESBITT</strong></p>
+            <p>Brazil</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              Hi…my name is lee O'Shea. Prior to starting this project I was
+              extremely lethargic and having a difficult time to find myself
+              financially. I literally had NO energy desire or passion to work
+              online. Since starting with Crypto Flex Trades 7 months ago, I've
+              got more money, more time than I know what to do with, I NEVER
+              find a day, where i find myself not learning and earning and
+              growing. The best part is…I now have found huge success
+              financially and I get to enjoy learning how to trade and to be
+              apart of fully automated trading with Crypto Flex Trades !! I now
+              am so blessed to spend so much more time to play with my young
+              kids, which is something I wasn't doing at all until joining
+              Crypto Flex Trades x
+            </p>
+            <p><strong>Lee O'Shea</strong></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              I saw a friend posting photos on a social media with a Porsche. I
+              love cars so I was intrigued. I texted him to know what it was
+              about. He showed me Crypto Flex Trades. I started my business in
+              Crypto Flex Trades as a 500$ pack member. I just closed my 3rd
+              week with 1,200$ of commissions and a 2,000$ Pack. There's nothing
+              like this in this sector. Weekly withdrawals, no monthly fees,
+              online meetings with the traders, owners, top earners... The
+              transparency is unequalled. Nothing comes close. What are you
+              waiting for?
+            </p>
+            <p><strong>Normand Beaudry</strong></p>
+            <p>Canada</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              My name is Arno Duijvesteijn and I joined Crypto Flex Trades from
+              August 1th. I'm making this journey with my daughter Bianca. We
+              started both with a $300 Package. I've now a 5K package and Bianca
+              is having a 10K. Hopefully I will reach the rank Executive soon
+              and Bianca will follow direct behind me. We have developed a
+              strategy with several people in Chile to have the best benefits of
+              Crypto Flex Trades and that is working very well for me.
+            </p>
+            <p><strong>Arno Duijvesteijn</strong></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              My name is MALACHY OZOEMENA ONAH, ( A.K.A Don Malachi) I joined
+              Crypto Flex Trades this January 2020 and the experience with the
+              company has been awesome, one of the things that entice me most in
+              this company is their TRANSPARENCY, this is one of the best online
+              company i have ever joined with good management team, wonderful
+              and powerful leaders, good back office, powerful and sustainable
+              marketing plan, prompt payment with easy withdrawals. Am looking
+              forward to doing great business with Crypto Flex Trades now and
+              many years to come. Am really proud to be a member of Crypto Flex
+              Trades and will make sure that everyone I know in my country joins
+              this company.
+            </p>
+            <p><strong>MALACHY ONAH</strong></p>
+            <p>Brazil</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              Morning, everyone. I started last Friday. I received a fast Start
+              bonus of $150, Uni-level bonus of $15 plus $20 on my trading pool,
+              $185 in my first week. It works and I’m brand new.
+            </p>
+            <p><strong>Sam Odies</strong></p>
+            <p>India</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              I started on the 1st of January and as of today I have $208. Fast
+              Start $120, Uni-level $27 and trading $61. I only bought a $300
+              package and I’m already getting ready to upgrade to a $500
+              package. It works. Couldn't be happier. Yes, will do. Very very
+              happy with everything I’m seeing with Crypto Flex Trades . This
+              will be the very first genuine, long term legacy business in the
+              financial market which puts us in an incredible position to
+              capitalise on the huge explosion that’s about to happen in the
+              coming months. Happy days!
+            </p>
+            <p><strong>Kerry Strachan</strong></p>
+            <p>Peru</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              I joined Crypto Flex Trades on the 08/08/2019 and started with
+              $500. My account is now at $18,629. I also achieved a Leadership
+              Rank of Executive and was paid $675 in Bitcoin. I am soon to
+              achieve Manager and may either opt for the Rolex watch or the cash
+              prize of $7,500. Crypto Flex Trades has seriously blown me away
+              and it continues to get better.
+            </p>
+            <p><strong>Shaun Grundlingh</strong></p>
+            <p>South Africa</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              I want to share my testimonials also. I started with $300 pack and
+              when I saw how this amazing company worked, I bought the 5k
+              package and in the end of 2019 I have upgraded to at least 20k.
+            </p>
+            <p><strong>Devo</strong></p>
+            <p>Norway</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              I joined Crypto Flex Trades on the 26/07/2019 and started with
+              $500 I am currently on the $10k package and my account is now at
+              $21,830. I have achieved a Leadership Rank of Executive. I am soon
+              to achieve Manager. Crypto Flex Trades has seriously blown me
+              away!
+            </p>
+            <p><strong>Luchia Van Den Berg</strong></p>
+            <p>Peru</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <p>
+              My journey with Crypto Flex Trades started when my upline Cindy
+              told me about it. I started with a $300 package and I’m already on
+              a $1000 package all profits from Crypto Flex Trades . Been paid
+              every Saturday without delay
+            </p>
+            <p><strong>Willem Deale</strong></p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleCaptions2"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleCaptions2"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="experience-block">
+  <h1>
+    <strong>Invested $5000 and above?</strong><br />
+    You Have qualified for an instant loan of $50,000
+  </h1>
+  <a class="btn btn-default btn-lg" href="login/index.php" title="Login"
+    >Login and apply</a
+  >
+</div>
+<div class="help-bar">
+  Need Help?
+  <a href="contact.html" class="btn btn-light" style="color: #8abc56"
+    >Contact Us</a
+  >
+</div>
+{% endblock content %}

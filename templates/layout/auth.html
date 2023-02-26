@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="title" content="{{ domain }}- Home" />
+    <meta
+      name="description"
+      content="An investment company is a corporation or trust engaged in the business of investing pooled capital into financial securities. Investment companies make profits by buying and selling shares, property, bonds, cash, other funds and 
+other assets."
+    />
+    <meta
+      name="keywords"
+      content="An investment company is a corporation or trust engaged in the business of investing pooled capital into financial securities. Investment companies make profits by buying and selling shares,property,bonds,cash,A reliable and professional company where you can invest your money and we will utilize it and offer you the best returns of your investment. ..."
+    />
+    <!-- Apple Stuff -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/assets/auth/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/auth/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/auth/css/themify-icons.css" />
+    <link rel="stylesheet" href="/assets/auth/css/metisMenu.css" />
+    <link rel="stylesheet" href="/assets/auth/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/assets/auth/css/slicknav.min.css" />
+    <title>{% block title %} {% endblock title %} | {{doamin}}</title>
+
+    <!-- others css -->
+    <link rel="stylesheet" href="/assets/auth/css/typography.css" />
+    <link rel="stylesheet" href="/assets/auth/css/default-css.css" />
+    <link rel="stylesheet" href="/assets/auth/css/styles.css" />
+    <link rel="stylesheet" href="/assets/auth/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/auth/users/css/toastr.min.css" />
+
+    <!-- modernizr css -->
+    <script src="/assets/auth/js/vendor/modernizr-2.8.3.min.js"></script>
+    {% block style %} {% endblock style %}
+  </head>
+
+  <body>
+    {% if messages %} {% for msg in messages %}
+    <div style="display: none" class="messages" data-msg="{{ msg }}"></div>
+    {% endfor %} {% endif %}
+    <!-- preloader area start -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+
+    {% block content %} {% endblock content %}
+
+    <!-- jquery latest version -->
+    <script src="/assets/auth/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="/assets/auth/js/popper.min.js"></script>
+    <script src="/assets/auth/js/bootstrap.min.js"></script>
+    <script src="/assets/auth/js/owl.carousel.min.js"></script>
+    <script src="/assets/auth/js/metisMenu.min.js"></script>
+    <script src="/assets/auth/js/jquery.slimscroll.min.js"></script>
+    <script src="/assets/auth/js/jquery.slicknav.min.js"></script>
+    <script src="/assets/auth/users/js/toastr.min.js"></script>
+    {% if messages %}
+    <script src="/assets/auth/users/js/toastr-init.js"></script>
+    {% endif %}
+    <script src="/assets/auth/users/js/circle-progress.min.js"></script>
+    <script src="/assets/auth/users/js/circle-progress-init.js"></script>
+
+    <!-- others plugins -->
+    <script src="/assets/auth/js/plugins.js"></script>
+    <script src="/assets/auth/js/scripts.js"></script>
+  </body>
+</html>

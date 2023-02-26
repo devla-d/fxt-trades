@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="The complex world of Bitcoin Mining just got a lot easier with {{domain}} Trades ."
+      name="description"
+    />
+    <meta name="keywords" content="{{domain}} Trades " />
+    <title>{% block title %} {% endblock title %} - {{domain}}</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.html" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="index.html" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="/assets/fonts/montserrat/stylesheet.css" rel="stylesheet" />
+    <link href="/assets/css/main.min.css" rel="stylesheet" />
+
+    <style>
+      .login .login-form {
+        position: relative;
+        max-width: 90%;
+        width: 486px;
+        top: 0;
+        left: 0;
+        transform: none;
+        background: #1479de;
+        border-radius: 33px;
+        box-shadow: 0 10px 12px hsla(0, 0%, 100%, 0.2);
+      }
+    </style>
+
+    <script>
+      window.devicePixelRatio = 2;
+    </script>
+    <script>
+      var front = {
+        country_code: "",
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- Main container -->
+
+    <style>
+      .mobile-menu .have-account a {
+        margin-left: 4px;
+      }
+
+      .custom-select {
+        width: 85% !important;
+        margin-left: 11px;
+      }
+
+      .lang_dropdown {
+        padding: 3px 12px;
+      }
+
+      button.lang_dropdown {
+        padding: 3px 12px;
+      }
+
+      @media (min-width: 768px) {
+        .main-menu {
+          width: unset !important;
+        }
+
+        header.main .main-menu > ul li a,
+        .lang_dropdown {
+          font-size: 10px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        header.main .main-menu > ul li a,
+        .lang_dropdown {
+          font-size: 13px;
+        }
+      }
+
+      @media (min-width: 1220px) {
+        .main-menu {
+          width: 90% !important;
+        }
+
+        header.main .main-menu > ul li a,
+        .lang_dropdown {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        header.main .main-menu > ul li a,
+        .lang_dropdown {
+          font-size: 16px;
+        }
+      }
+    </style>
+
+    <div class="site-container">
+      <!-- START STANDARD HEADER HERE --- ####################################################-->
+      <div class="mobile-menu">
+        <div class="menu-closer">
+          <img src="/assets/img/closer.svg" class="closer" />
+        </div>
+        <div class="have-account">
+          <span class="logo">
+            <a href="index.html" title="{{domain}} Trades  Homepage"
+              ><img src="/assets/img/cfx-silver-logo.png"
+            /></a>
+          </span>
+          Have an Account?
+          <a href="{% url 'login' %}"><i class="fa fa-lock"></i> Login</a>
+        </div>
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a
+                class="menu-link"
+                href="{% url 'register' %}"
+                title="Create a {{domain}} Trades  account"
+                ><i class="fa fa-user"></i> Register Now</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-link"
+                href="/"
+                title="Visit {{domain}} Trades  home page"
+                ><i class="fa fa-home fa-fw"></i> Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-link"
+                href="{% url 'about' %}"
+                title="About {{domain}} Trades "
+                ><i class="fa fa-info-circle fa-fw"></i> About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-link"
+                href="{% url 'academy' %}"
+                title="Bitcoin Mining E-learning Platform"
+                ><i class="fa fa-graduation-cap fa-fw"></i> Academy</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="menu-link"
+                href="{% url 'plans' %}"
+                title="{{domain}} Trades  Plans"
+                ><i class="fa fa-rocket fa-fw"></i> Plans</a
+              >
+            </li>
+          </ul>
+
+          <h3>Legal</h3>
+          <ul>
+            <!--<li><a class="menu-link" href="#">Privacy Policy</a></li>
+            <li><a class="menu-link" href="#">Cookie Policy</a></li>-->
+          </ul>
+
+          <style>
+            .lang_drop_mobile {
+              width: 80%;
+              margin-left: 5%;
+              margin-bottom: 5%;
+            }
+
+            .lang_menu_mobile {
+              width: 80%;
+            }
+          </style>
+          <button
+            class="btn dropdown-toggle lang_dropdown lang_drop_mobile d-flex align-items-center"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          ></button>
+        </div>
+      </div>
+      <!-- <div id="ytWidget"></div> -->
+      <script
+        src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false"
+        type="text/javascript"
+      ></script>
+      <header class="main">
+        <div class="header-container">
+          <div class="logo">
+            <a href="/" title="{{domain}} Trades  Homepage"
+              ><img src="/assets/img/logo-dark.png"
+            /></a>
+          </div>
+          <div class="mobile-trigger"><img src="/assets/img/bars.svg" /></div>
+          <div class="main-menu text-right">
+            <ul>
+              <li>
+                <a
+                  class="menu-link"
+                  href="/"
+                  title="Visit {{domain}} Trades  home page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="menu-link"
+                  href="{% url 'about' %}"
+                  title="About {{domain}} Trades "
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="menu-link"
+                  href="{% url 'academy' %}"
+                  title="Bitcoin mining E-learning Platform"
+                  >Academy</a
+                >
+              </li>
+
+              <li>
+                <a
+                  class="menu-link"
+                  href="{% url 'live_event' %}"
+                  title="View live {{domain}} Trades  events"
+                  >Live Event</a
+                >
+              </li>
+              <li>
+                <a
+                  class="menu-link"
+                  href="{% url 'plans' %}"
+                  title="{{domain}} Trades  Plans"
+                  >Plans</a
+                >
+              </li>
+              <li class="divider"><a href="#"></a></li>
+              <li>
+                <a
+                  class="menu-link highlight"
+                  href="{% url 'login' %}"
+                  title="Login to your {{domain}} Trades  account"
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'register' %}"
+                  class="btn btn-default"
+                  title="Create a {{domain}} Trades  account"
+                  >Register</a
+                >
+              </li>
+
+              <li class="dropdown">
+                <style>
+                  .lang_dropdown{
+                      color: #1479de;
+                      background-color: transparent;: focus: color: black;
+                      background-color: transparent;
+                      border: 2px solid #1479de;
+                      transition: 0.5s;
+                  }
+
+                  .lang_dropdown:active{
+                      background-color: transparent !important;
+                  }
+
+                  .lang_dropdown:hover{
+                      background-color: transparent;
+                      color: black;
+                      border: 2px solid black;
+                  }
+
+                  .lang_dropdown:focus{
+                      background-color: transparent
+                  }
+
+                  .lang_menu_item.active, .dropdown-item:active{
+                      background-color: #1479de;
+                  }
+
+                  header.main .jp_main_menu > ul li a.active{
+                      color: white;
+                  }
+
+                  .lang_dropdown a{
+                      color: #1479de !important;
+                      transition: 0.5s !important;
+                  }
+
+                  .lang_dropdown:hover > a{
+                      color: black !important;
+                  }
+                </style>
+
+                <button
+                  class="btn dropdown-toggle lang_dropdown d-flex align-items-center"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                ></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- END STANDARD HEADER HERE --- ####################################################-->
+
+      {% block content %} {% endblock content %}
+
+      <!-- standard footer START ############################################################ -->
+
+      <div class="sub-footer">
+        <div class="container" style="max-width: 1300px">
+          <div class="row">
+            <div class="col-sm-4" style="position: relative">
+              <div class="logo">
+                <img
+                  src="/assets/img/logo-dark.png"
+                  alt="{{domain}} Trades  Logo"
+                />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <ul class="nav flex-column text-center">
+                <li class="nav-item">
+                  <a
+                    href="{% url 'about' %}"
+                    title="Learn About {{domain}} Trades "
+                    >About Us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="{% url 'academy' %}"
+                    title="Bitcoin mining e-learning"
+                    >Academy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="event-coming-soon.html"
+                    title="Next event coming soon"
+                    >Event Tickets</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="{% url 'live_event' %}"
+                    title="watch {{domain}} Trades  live events"
+                    >Live Event</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'plans' %}" title="{{domain}} Trades  plans"
+                    >Plans</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-5 text-center">
+              <p><strong>Get In Touch</strong></p>
+              <div class="number">
+                <i class="fa fa-phone"></i> +1 (626) 634‑2197
+              </div>
+              <div class="address">
+                <i class="fa fa-envelope"></i> support@cryptoflextrades.com
+              </div>
+              <br />
+              <div class="address">
+                <i class="fa fa-phone"></i> 4017 Clarke Pen Road Farmingdale New
+                York, USA.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="ytWidget"></div> -->
+      <script
+        src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false"
+        type="text/javascript"
+      ></script>
+      <footer class="main">
+        <div class="footer-container">
+          <div class="scroll-to-top"><i class="fa fa-chevron-up"></i></div>
+          &copy; Copyright 2009 - 2022. All Rights Reserved
+        </div>
+
+        <!-- GetButton.io widget -->
+        <script type="text/javascript">
+          (function () {
+            var options = {
+              whatsapp: "+1 (626) 634‑2197", // WhatsApp number
+              call_to_action: "Message us", // Call to action
+              button_color: "#FF6550", // Color of button
+              position: "left", // Position may be 'right' or 'left'
+            };
+            var proto = "https:",
+              host = "getbutton.io",
+              url = proto + "//static." + host;
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = url + "/widget-send-button/js/init.js";
+            s.onload = function () {
+              WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName("script")[0];
+            x.parentNode.insertBefore(s, x);
+          })();
+        </script>
+        <!-- /GetButton.io widget -->
+      </footer>
+      <!-- standard footer END ############################################################ -->
+    </div>
+    <!--end of site-container-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/assets/js/main.min.js"></script>
+    <script>
+      ScrollReveal().reveal(".package-icon", { delay: 500, duration: 2000 });
+
+      ScrollReveal().reveal(".step-1");
+      ScrollReveal().reveal(".step-2", { delay: 500 });
+      ScrollReveal().reveal(".step-3", { delay: 1000 });
+      ScrollReveal().reveal(".step-4", { delay: 1500 });
+      var windowWidth = $(document).width();
+
+      if (windowWidth >= 768) {
+        ScrollReveal().reveal(".academy-2", { duration: 2000 });
+        ScrollReveal().reveal(".academy-1", { delay: 500, duration: 2000 });
+        ScrollReveal().reveal(".academy-3", { delay: 500, duration: 2000 });
+      } else {
+        ScrollReveal().reveal(".academy-1", { duration: 1000 });
+        ScrollReveal().reveal(".academy-2", { duration: 1000 });
+        ScrollReveal().reveal(".academy-3", { duration: 1000 });
+      }
+
+      $(".scroll-to-top").on("click", function (e) {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        e.preventDefault();
+      });
+
+      $(".mobile-trigger, .menu-closer").on("click", function (e) {
+        $(".mobile-menu").toggleClass("showing");
+        $("body").toggleClass("menu-showing");
+        e.preventDefault();
+      });
+    </script>
+    <script>
+      function redirectLangSelect(locale) {
+        var url = window.location.pathname;
+        var parts = url.split("index.html");
+        var lastPart = "";
+
+        if (parts.length > 1) {
+          lastPart = parts[parts.length - 1];
+        }
+        if (lastPart === "es" || lastPart === "zh") {
+          lastPart = "";
+        }
+        var path = locale === "en" ? lastPart : locale + "/" + lastPart; //
+
+        window.location.href = window.location.origin + "/" + path;
+      }
+
+      $(".lang_menu_item").click(function (e) {
+        e.preventDefault();
+        var locale = $(this).attr("href");
+
+        _setCookie("locale", locale, 30);
+
+        redirectLangSelect(locale);
+      });
+
+      $(document).ready(function () {
+        var url = window.location.pathname;
+        var parts = url.split("index.html");
+        var secondPart = "";
+        if (parts.length > 1) {
+          secondPart = parts[1];
+        }
+        var count = 0;
+        $(".lang_menu_item").each(function () {
+          var page = $(this).attr("href");
+          var label = $(this).text();
+          if (page == secondPart) {
+            $("button.lang_dropdown").text(label);
+            $("button.lang_dropdown").attr("locale", page);
+            count++;
+          }
+        });
+        if (count < 1) {
+          $("button.lang_dropdown").text("English");
+          $("button.lang_dropdown").attr("locale", "en");
+        }
+      });
+
+      $(document).ready(function () {
+        var selectedLocale = $("button.lang_dropdown").attr("locale");
+
+        var locale = _getCookie("locale");
+
+        var url = window.location.pathname;
+        var parts = url.split("index.html");
+        var lastPart = "";
+
+        if (parts.length > 1) {
+          lastPart = parts[parts.length - 2];
+        }
+
+        if (
+          locale !== selectedLocale &&
+          lastPart !== "first-anniversary-register" &&
+          lastPart !== "live-event-registration" &&
+          lastPart !== "live"
+        ) {
+          if (
+            locale == "jp" ||
+            locale == "zh" ||
+            locale == "fr" ||
+            locale == "ko" ||
+            locale == "es" ||
+            locale == "de" ||
+            locale == "sv" ||
+            locale == "cs"
+          ) {
+            redirectLangSelect(locale);
+          }
+        }
+      });
+
+      function _setCookie(name, value, expireDays) {
+        var d = new Date();
+        d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
+
+      function _getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+    </script>
+    <script>
+      $(function () {});
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script>
+      // $('.desktop-nav').on('click', 'a', function(event) {
+      // 	var title = $(this).text().trim().replace(/\s+/, ' ');
+      // 	ga('send', {
+      // 		hitType:       'event',
+      // 		eventCategory: 'Nav',
+      // 		eventAction:   'desktop-nav',
+      // 		eventLabel:    title
+      // 	});
+      // });
+      // $('.mobile-menu').on('click', 'a', function(event) {
+      // 	var title = $(this).text().trim().replace(/\s+/, ' ');
+      // 	ga('send', {
+      // 		hitType:       'event',
+      // 		eventCategory: 'Nav',
+      // 		eventAction:   'mobile-nav',
+      // 		eventLabel:    title
+      // 	});
+      // });
+      // $('.site-footer').on('click', 'a', function(event) {
+      // 	var title = $(this).text().trim().replace(/\s+/, ' ');
+      // 	ga('send', {
+      // 		hitType:       'event',
+      // 		eventCategory: 'Nav',
+      // 		eventAction:   'footer-nav',
+      // 		eventLabel:    title
+      // 	});
+      // });
+    </script>
+
+    <!-- page End-->
+  </body>
+</html>

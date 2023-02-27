@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def home(request):
@@ -23,3 +23,7 @@ def plans(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+
+def indexh(request):
+    return redirect("home")

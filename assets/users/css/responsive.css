@@ -321,7 +321,8 @@
         width: 50%;
     }
     .user-statistic__item {
-        width: 50%;
+        /* width: 50%; */
+        width: 100%;
     }
 }
 

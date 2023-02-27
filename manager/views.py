@@ -261,9 +261,9 @@ def investments_detail(request, pk):
         return redirect("investments")
     if request.POST:
         if investment.status != "completed":
-            investment.user.balance += investment.amount_earn
+            # investment.user.balance += investment.amount_earn
             investment.status = "completed"
-            investment.user.save()
+            # investment.user.save()
             investment.save()
             utils.create_notification(
                 user=investment.user,

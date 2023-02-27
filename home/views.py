@@ -19,3 +19,7 @@ def live_event(request):
 
 def plans(request):
     return render(request, "plans.html")
+
+
+def contact(request):
+    return render(request, "contact.html")

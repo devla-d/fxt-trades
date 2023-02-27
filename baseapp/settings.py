@@ -28,8 +28,8 @@ SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production http://127.0.0.1:8000/!
 
-# print("DEBUG", env.bool("DEBUG"))
-DEBUG = False
+
+DEBUG = True
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
